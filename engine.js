@@ -21,6 +21,7 @@ const filterSubject = (subject) => {
   while (subject.endsWith(".")) {
     subject = subject.slice(0, subject.length - 1);
   }
+
   return subject;
 };
 
