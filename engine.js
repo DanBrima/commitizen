@@ -36,11 +36,12 @@ module.exports = (options) => {
 
   return {
     prompter(cz, commit) {
-      chalkAnimation.rainbow("Made by Dan Brima\n");
+      // chalkAnimation.rainbow("Made by Dan Brima\n");
 
       cz.prompt([
         {
           type: "list",
+
           name: "type",
           message: "Select the type of change that you're committing:",
           choices: choices,
