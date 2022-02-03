@@ -1,14 +1,14 @@
 "format cjs";
 
-var map = require("lodash.map");
-var longest = require("longest");
-var chalk = require("chalk");
+const map = require("lodash.map");
+const longest = require("longest");
+const chalk = require("chalk");
 const chalkAnimation = require("chalk-animation");
 
-var headerLength = (answers) =>
+const headerLength = (answers) =>
   answers.type.length + 2 + (answers.scope ? answers.scope.length + 2 : 0);
 
-var maxSummaryLength = (options, answers) =>
+const maxSummaryLength = (options, answers) =>
   options.maxHeaderWidth - headerLength(answers);
 
 const filterSubject = (subject) => {
@@ -27,15 +27,15 @@ const filterSubject = (subject) => {
 module.exports = (options) => {
   const { types } = options;
 
-  var length = longest(Object.keys(types)).length + 1;
-  var choices = map(types, (type, key) => ({
+  const length = longest(Object.keys(types)).length + 1;
+  const choices = map(types, (type, key) => ({
     name: (key + ":").padEnd(length) + " " + type.description,
     value: key,
   }));
 
   return {
     prompter(cz, commit) {
-      chalkAnimation.rainbow("Made by Dan Brima\n".rainbow);
+      chalkAnimation.rainbow("Made by Dan Brima\n");
 
       cz.prompt([
         {
