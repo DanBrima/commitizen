@@ -1,11 +1,8 @@
 "format cjs";
 
-var wrap = require("word-wrap");
-var map = require("lodash.map");
+var colors = require("colors");
 var longest = require("longest");
 var chalk = require("chalk");
-
-var filter = (array) => array.filter((x) => x);
 
 var headerLength = (answers) =>
   answers.type.length + 2 + (answers.scope ? answers.scope.length + 2 : 0);
@@ -30,13 +27,14 @@ module.exports = (options) => {
   const { types } = options;
 
   var length = longest(Object.keys(types)).length + 1;
-  var choices = map(types, (type, key) => ({
+  var choices = types.map((type, key) => ({
     name: (key + ":").padEnd(length) + " " + type.description,
     value: key,
   }));
 
   return {
     prompter(cz, commit) {
+      console.log("Made by Dan Brima\n".rainbow);
       cz.prompt([
         {
           type: "list",
@@ -49,7 +47,7 @@ module.exports = (options) => {
           type: "input",
           name: "scope",
           message:
-            "What is the scope of this change (e.g. component or file name): (press enter to skip)",
+            "What is the scope of this change (e.g. component or file name): ",
           default: options.defaultScope,
           filter: (value) => value.trim(),
         },
@@ -83,7 +81,7 @@ module.exports = (options) => {
                 : chalk.red;
             return color("(" + filteredSubject.length + ") " + subject);
           },
-          filter: (subject) => filterSubject(subject),
+          filter: filterSubject,
         },
       ]).then(({ scope, type, subject }) => {
         const formattedScope = "(" + scope + ")";
