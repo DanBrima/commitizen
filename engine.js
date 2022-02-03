@@ -1,6 +1,7 @@
 "format cjs";
 
 var colors = require("colors");
+var map = require("lodash.map");
 var longest = require("longest");
 var chalk = require("chalk");
 
@@ -27,7 +28,7 @@ module.exports = (options) => {
   const { types } = options;
 
   var length = longest(Object.keys(types)).length + 1;
-  var choices = types.map((type, key) => ({
+  var choices = map(types, (type, key) => ({
     name: (key + ":").padEnd(length) + " " + type.description,
     value: key,
   }));

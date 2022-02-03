@@ -21,7 +21,8 @@
     "colors": "^1.4.0",
     "commitizen": "^4.0.3",
     "conventional-commit-types": "^3.0.0",
-    "longest": "^2.0.1"
+    "longest": "^2.0.1",
+    "lodash.map": "^4.5.1"
   },
   "devDependencies": {
     "@types/chai": "4.3.0",
