@@ -1,9 +1,6 @@
-"format cjs";
-
 const map = require("lodash.map");
 const longest = require("longest");
 const chalk = require("chalk");
-const chalkAnimation = require("chalk-animation");
 
 const headerLength = (answers) =>
   answers.type.length + 2 + (answers.scope ? answers.scope.length + 2 : 0);
@@ -36,8 +33,6 @@ module.exports = (options) => {
 
   return {
     prompter(cz, commit) {
-      // chalkAnimation.rainbow("Made by Dan Brima\n");
-
       cz.prompt([
         {
           type: "list",
