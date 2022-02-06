@@ -24,6 +24,6 @@
     "@commitlint/load": ">6.1.1"
   },
   "bin": {
-    "danb": "bin/danb"
+    "danb": "bin/danb.js"
   }
 }
