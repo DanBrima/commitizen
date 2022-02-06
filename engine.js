@@ -1,4 +1,3 @@
-const map = require("lodash.map");
 const longest = require("longest");
 const chalk = require("chalk");
 
