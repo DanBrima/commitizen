@@ -25,10 +25,11 @@ const filterSubject = (subject) => {
 module.exports = (options) => {
   const { types } = options;
 
-  const length = longest(Object.keys(types)).length + 1;
-  const choices = map(types, (type, key) => ({
-    name: (key + ":").padEnd(length) + " " + type.description,
-    value: key,
+  const length =
+    longest(Object.values(types).map((type) => type.title)).length + 1;
+  const choices = Object.entries(types).map(([typeName, type]) => ({
+    name: (type.title + ":").padEnd(length) + " " + type.description,
+    value: typeName,
   }));
 
   return {
