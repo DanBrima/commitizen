@@ -1,1 +1,1 @@
-# commitizen
+# cz-bsmch
