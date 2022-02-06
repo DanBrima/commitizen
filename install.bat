@@ -1,3 +1,1 @@
-npm install -g commitizen
-npm install -g DanBrima/commitizen
-echo '{ "path": "cz-bsmch" }' > ~/.czrc
+npm install -g commitizen cz-bsmch && echo '{ "path": "cz-bsmch" }' > ~/.czrc
