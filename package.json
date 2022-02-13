@@ -15,7 +15,6 @@
   "license": "MIT",
   "dependencies": {
     "chalk": "^2.4.1",
-    "chalk-animation": "^1.6.0",
     "commitizen": "^4.0.3",
     "conventional-commit-types": "^3.0.0",
     "longest": "^2.0.1"
@@ -24,6 +23,6 @@
     "@commitlint/load": ">6.1.1"
   },
   "bin": {
-    "danb": "bin/danb.js"
+    "ac": "bin/ac.js"
   }
 }
