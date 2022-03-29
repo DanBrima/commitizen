@@ -15,7 +15,7 @@
   "license": "MIT",
   "dependencies": {
     "chalk": "^2.4.1",
-    "commitizen": "^4.0.3",
+    "commitizen": "^4.2.4",
     "conventional-commit-types": "^3.0.0",
     "longest": "^2.0.1"
   },
@@ -23,6 +23,7 @@
     "@commitlint/load": ">6.1.1"
   },
   "bin": {
-    "ac": "bin/ac.js"
+    "ac": "bin/ac.js",
+    "acp": "bin/acp.js"
   }
 }
