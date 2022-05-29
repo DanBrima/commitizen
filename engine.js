@@ -1,5 +1,5 @@
-const longest = require("longest");
 const chalk = require("chalk");
+const longest = require("longest");
 
 const headerLength = (answers) =>
   answers.type.length + 2 + (answers.scope ? answers.scope.length + 2 : 0);
@@ -22,21 +22,24 @@ const filterSubject = (subject) => {
 };
 
 module.exports = (options) => {
-  const { types } = options;
-
+  const { types, showCommitTypeExplanation } = options;
   const length =
     longest(Object.values(types).map((type) => type.title)).length + 1;
-  const choices = Object.entries(types).map(([typeName, type]) => ({
-    name: (type.title + ":").padEnd(length) + " " + type.description,
-    value: typeName,
-  }));
+
+  const choices = Object.entries(types).map(([typeName, type]) => {
+    return {
+      name: !showCommitTypeExplanation
+        ? type.title
+        : (type.title + ":").padEnd(length) + " " + type.description,
+      value: typeName,
+    };
+  });
 
   return {
     prompter(cz, commit) {
       cz.prompt([
         {
           type: "list",
-
           name: "type",
           message: "Select the type of change that you're committing:",
           choices: choices,

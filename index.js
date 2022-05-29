@@ -9,6 +9,7 @@ var options = {
   defaultScope: process.env.CZ_SCOPE || "entire project",
   defaultSubject: process.env.CZ_SUBJECT || config.defaultSubject,
   maxHeaderWidth: 150,
+  showCommitTypeExplanation: config.showCommitTypeExplanation ?? false,
 };
 
 module.exports = engine(options);
