@@ -9,7 +9,7 @@
   },
   "engineStrict": true,
   "engines": {
-    "node": ">= 10"
+    "node": ">= 12"
   },
   "author": "Dan Brima <brima.dan@gmail.com>",
   "license": "MIT",
