@@ -1,6 +1,6 @@
 {
   "name": "cz-bsmch",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "Commitizen adapter for bsmch",
   "main": "index.js",
   "repository": {
