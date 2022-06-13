@@ -1,6 +1,6 @@
 {
   "name": "cz-bsmch",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "Commitizen adapter for bsmch",
   "main": "index.js",
   "repository": {
@@ -14,7 +14,6 @@
   "author": "Dan Brima <brima.dan@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "chalk": "^2.4.1",
     "commitizen": "^4.2.4",
     "conventional-commit-types": "^3.0.0",
     "longest": "^2.0.1"
@@ -23,7 +22,8 @@
     "@commitlint/load": ">6.1.1"
   },
   "bin": {
-    "ac": "bin/ac.js",
-    "acp": "bin/acp.js"
+    "ac": "bin/ac.bash",
+    "acp": "bin/acp.bash",
+    "log": "bin/log.bash"
   }
 }
