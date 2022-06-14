@@ -49,4 +49,4 @@ echo '{ "path": "cz-bsmch", "showCommitTypeExplanation": true }' > ~/.czrc
 The package adds three commends:
   - ac: Adds the untracked files and commits via commitizen
   - acp: Adds the untracked files, commits via commitizen and pushes to the remote repo
-  - log: shorthand for "git log --all --color --graph --decorate"
+  - adog: shorthand for "git log --all --decorate --oneline --graph"

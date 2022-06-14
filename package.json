@@ -1,6 +1,6 @@
 {
   "name": "cz-bsmch",
-  "version": "1.2.1",
+  "version": "1.2.2",
   "description": "Commitizen adapter for bsmch",
   "main": "index.js",
   "repository": {
@@ -25,6 +25,6 @@
   "bin": {
     "ac": "bin/ac.bash",
     "acp": "bin/acp.bash",
-    "log": "bin/log.bash"
+    "adog": "bin/adog.bash"
   }
 }
