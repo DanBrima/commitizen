@@ -11,6 +11,9 @@
   "engines": {
     "node": ">= 12"
   },
+  "scripts": {
+    "test": "echo 'We wrote no tests for this package!"
+  },
   "author": "Dan Brima <brima.dan@gmail.com>",
   "license": "MIT",
   "dependencies": {
