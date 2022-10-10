@@ -29,5 +29,9 @@
     "ac": "bin/ac.bash",
     "acp": "bin/acp.bash",
     "adog": "bin/adog.bash"
+  },
+  "np": {
+    "branch": "main",
+    "tests": false
   }
 }
