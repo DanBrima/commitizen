@@ -1,9 +1,9 @@
-var engine = require("./engine");
-var conventionalCommitTypes = require("conventional-commit-types");
-var configLoader = require("commitizen").configLoader;
+const engine = require("./engine");
+const conventionalCommitTypes = require("conventional-commit-types");
+const configLoader = require("commitizen").configLoader;
 
-var config = configLoader.load() || {};
-var options = {
+const config = configLoader.load() || {};
+const options = {
   types: config.types || conventionalCommitTypes.types,
   defaultType: process.env.CZ_TYPE || config.defaultType,
   defaultScope: process.env.CZ_SCOPE || "entire project",

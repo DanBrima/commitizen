@@ -64,15 +64,17 @@ module.exports = (options) => {
           validate(subject, answers) {
             const filteredSubject = filterSubject(subject);
 
-            return filteredSubject.length == 0
-              ? "subject is required"
-              : filteredSubject.length <= maxSummaryLength(options, answers)
+            if (filteredSubject.length === 0) {
+              return "subject is required";
+            }
+
+            return filteredSubject.length <= maxSummaryLength(options, answers)
               ? true
               : "Subject length must be less than or equal to " +
-                maxSummaryLength(options, answers) +
-                " characters. Current length is " +
-                filteredSubject.length +
-                " characters.";
+                  maxSummaryLength(options, answers) +
+                  " characters. Current length is " +
+                  filteredSubject.length +
+                  " characters.";
           },
           transformer: (subject, answers) => {
             const filteredSubject = filterSubject(subject);
